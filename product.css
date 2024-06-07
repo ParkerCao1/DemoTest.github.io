@@ -1,0 +1,13 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.product1,
+.product1  img
+{
+  width: 100%;
+}

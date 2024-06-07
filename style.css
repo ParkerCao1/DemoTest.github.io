@@ -1,0 +1,813 @@
+@font-face {
+    font-family: 'bankGT';
+    src: url(./tt0590m_.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    
+    padding: bottom 50px; 
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    
+}
+
+.container1{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition:   0.3s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(219, 219, 219);
+
+}
+
+.nav .container1{
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    transition:   0.3s ease-in-out;
+}
+.brandName{
+    position: absolute;
+    left: 15px;
+}
+.logo{
+     position: absolute; 
+    /* top: 5px; */
+    right: 15px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.nav ul{
+    position: relative;
+    
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+.nav .brandName a{
+    text-decoration: none;
+   
+    transition:   0.3s ease-in-out;
+    color: rgb(0, 0, 0);
+    font-family:bankGT;
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.nav ul a{
+    text-decoration: none;
+    padding: 0% 15px;
+    transition:   0.3s ease-in-out;
+    color: rgb(0, 0, 0);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    
+}
+
+.nav ul a.current{
+    color: #c0392b;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.nav ul a:hover{
+    color: #c0392b;
+}
+.nav img{
+    width: 50px;
+}
+
+.peizhiqi{
+    display: flex;
+}
+.peizhiqi-left{
+    background-color: #ffffff;
+    height: calc(100vh - 61.6px);
+    width: 71%;
+    position: relative;
+    bottom: -61.6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.peizhiqi-left .product-engage{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+
+
+.peizhiqi-right{
+    background-color: #ffffff;
+    height: calc(100vh - 61.6px);
+    width: 26%;
+    margin: 0 1.5%;
+    position: relative;
+    bottom: -61.6px;
+    
+}
+
+.peizhiqi-right-biaoti ul{
+    position: relative;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 1rem;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:300;
+    transition: all 0.3s ease;
+}
+.peizhiqi-right-biaoti ul li.active{
+    text-decoration: underline;
+    font-weight: 700;
+}
+.peizhiqi-right-biaoti ul li:hover{
+    text-decoration: underline;
+}
+.peizhiqi-right-neirong{
+    width: 100%;
+    height: calc(100% - 150px);
+    
+}
+.peizhiqi-right-neirong1{
+    display: none;
+}
+.peizhiqi-right-neirong1.active{
+    display: contents;
+}
+
+
+.peizhiqi-right-neirong1 .carmodel{
+    width: 100%;
+    margin: 20px 5px;
+    padding: 10px 10px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:300;
+    line-height: 2rem;
+    transition: all 0.1s ease;
+}
+.peizhiqi-right-neirong1 .carmodel:hover{
+   /* transform: scaleX(1.01); */
+   background-color: rgba(0, 0, 0, 0.02);
+}
+.peizhiqi-right-neirong1 .carmodel.active{
+    
+    border: 2px solid rgba(139, 2, 2, 0.5);
+}
+.peizhiqi-right-dibu{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 6.25rem;
+    position: absolute; 
+     bottom: 0px; 
+     
+}
+.peizhiqi-right-dibu .buttons{
+    display: flex;
+    flex-direction: row;
+}
+.peizhiqi-right-dibu button{
+    width: 6.25rem;
+    height: 2.5rem;
+    margin: 0 5px;
+   
+    
+}
+.peizhiqi-right-dibu .btnNext.active{
+    background-color:rgb(187, 10, 48);
+    border:none;
+    outline: none;
+    color: white;
+    
+ 
+}
+.peizhiqi-right-dibu .btnPre{
+    /* background-color:rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+    outline: none;
+    font-size: 1.1rem; */
+    opacity: 0;
+
+}
+.peizhiqi-right-neirong2-title{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.peizhiqi-right-neirong2-title hr{
+    opacity: 0.3;
+}
+.peizhiqi-right-neirong2-title ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.peizhiqi-right-neirong2-title ul li{
+   margin: 0 15px;
+}
+.peizhiqi-right-neirong2 .carpaint-title{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* margin: 20px 0 0; */
+}
+.peizhiqi-right-neirong2 h3{
+    margin: 20px 10px 5px;
+    font-weight: 400;
+    
+}
+.carpaint-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+.carpaint-container .carpaint{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;   
+}
+.carpaint-container .color-box{
+    width: 3.75rem;
+    height: 3.75rem;
+    margin: 5px 25px;  
+}
+.carpaint-container .color-box.active{
+    outline: 1px solid red;
+    outline-offset: 3px;
+}
+.carpaint-container .blue-carpaint{
+    background-color: blue;
+}
+.carpaint-container .yellow-carpaint{
+    background-color: rgb(184, 184, 184);
+}
+.carpaint-container .red-carpaint{
+    background-color: rgb(255, 0, 0);
+}
+.carpaint-container .black-carpaint{
+    background-color: rgb(0, 0, 0);
+}
+.carpaint-container .matte-red-carpaint{
+    background-color: rgb(160, 1, 1);
+}
+
+.seat-color-title{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin: 20px 0 0;
+}
+.seat-color-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+     
+}
+.seat-color-container .seat-color{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+     
+}
+.seat-color-container .seat-color-box{
+    width: 3.75rem;
+    height: 3.75rem;
+    /* background-color: rebeccapurple; */
+    margin: 5px 25px;
+    
+}
+.seat-color-container .seat-color-box.active{
+    outline: 1px solid red;
+    outline-offset: 3px;
+}
+.seat-color-container .black-seat{
+    background-color: black;
+}
+.seat-color-container .white-seat{
+    background-color: rgb(246, 219, 188);
+}
+.peizhiqi-right-neirong2 span{
+    font-size: 0.8rem;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:300;
+}
+.peizhiqi-right-neirong3 .rear-seat{
+    width: 100%;
+    margin: 20px 5px;
+    padding: 10px 10px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:300;
+    line-height: 2rem;
+    transition: all 0.1s ease;
+}
+.peizhiqi-right-neirong3 .rear-seat:hover{
+   /* transform: scaleX(1.01); */
+   background-color: rgba(0, 0, 0, 0.02);
+}
+.peizhiqi-right-neirong3 .rear-seat.active{
+    
+    border: 2px solid rgba(139, 2, 2, 0.5);
+}
+
+.peizhiqi-right-neirong4 .carpaint-box{
+    width: 3.75rem;
+    height: 3.75rem;
+    margin: 5px 20px 0px 0px;  
+    background-color: blue;
+}
+
+.peizhiqi-right-neirong4 .yourchoise{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem 0 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 100;
+}
+.peizhiqi-right-neirong4 h3{
+    font-size: 1rem;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:300;
+    margin: 5px 0 ;
+}
+.peizhiqi-right-neirong4 .model{
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+.peizhiqi-right-neirong4 .carpaint-container{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.peizhiqi-right-neirong4 .seat-color-container{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.peizhiqi-right-neirong4 .seat-color-box-overview{
+    width: 3.75rem;
+    height: 3.75rem;
+    background-color: rgb(0, 0, 0);
+    margin: 5px 25px 5px 0;
+}
+
+.peizhiqi-right-neirong4 .rear-seat{
+   
+    margin: 20px 0 20px 0px;  
+  
+    
+}
+.peizhiqi-right-neirong4 span{
+    font-weight: 300;
+    
+}
+
+.contact-information{
+
+position: fixed;
+top: 0px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+width: 31rem;
+height: 12.5rem;
+margin: auto;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius: 20px;
+background-image: linear-gradient(to top, #ececec 0%, #f5f5f5 100%);
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2) ;
+display:none;
+}
+.contact-information i{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-weight: 100;
+    color: #5e5e5e;
+}
+.contact-information h2{
+    margin: 0px 0 20px;
+    font-size: 2rem;
+    font-family:bankGT;
+    text-transform: uppercase;
+}
+.contact-information span{
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.warning-info{
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: #a5a5a5;
+   position: absolute;
+   bottom: 20px;
+}
+.warning-info img{
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+ @media(max-width:767px){
+    body{
+       width: 100vw;
+       overflow: auto;
+       overflow-x:hidden
+    }
+    .nav .logo,
+    .nav .brandName{
+        display: none;
+    }
+    .nav .phonetitle{
+        display: none;
+    }
+    .nav{
+        position: fixed;
+        top: 0;
+        z-index: 100;
+       
+    }
+    .nav .container1{
+        height: 40px;
+    }
+    .nav ul a.current,
+    .nav ul a{
+        font-size: 5rem;
+        color: black;
+    }
+
+    .peizhiqi{
+        flex-direction: column;
+        align-items:center ;
+        justify-content: center;
+    }
+    .peizhiqi-left{
+       
+        height: 45vh;
+        width: 100vw;
+        position: fixed;
+        top: 40px;
+        background: rgb(247, 247, 247);
+        z-index: 100;
+       
+        
+    }
+    .peizhiqi-right{
+       
+        height: auto;
+        padding: 0 0 17rem;
+        width: 100vw;
+      
+        position: relative;
+        top: calc(45vh + 40px);
+        
+    } 
+    .carpaint-container .color-box{
+        width: 12rem;
+        height: 12rem;
+        margin: 5px 25px;  
+    }
+    .seat-color-container .seat-color-box{
+        width: 12rem;
+        height: 12rem;
+       
+        margin: 5px 25px;
+        
+    }
+
+    .peizhiqi-right-neirong2 .carpaint-title,
+    .peizhiqi-right-neirong2 .seat-color-title{
+        font-size: 3.5rem;
+    }
+    .peizhiqi-right-neirong4 .carpaint-box,
+    .peizhiqi-right-neirong4 .seat-color-box-overview{
+        width: 12rem;
+        height: 12rem;
+    }
+    .peizhiqi-right-biaoti{
+        position: fixed;
+        width: 100vw;
+        top: 40px;
+        
+        z-index: 101;
+        
+    }
+    .peizhiqi-right-biaoti ul{
+        font-size: 4rem;
+    }
+    .peizhiqi-right-dibu{
+        position: fixed;
+        height: 15rem;
+        background-color: #ffffff;
+        bottom: 0;
+       box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1);
+       padding: 0 20px;
+        z-index: 200;
+    }
+    .peizhiqi-right-dibu button{
+        width: 25rem;
+        height: 8rem;
+        margin: 0 10px;
+       
+        
+    }
+    .peizhiqi-right-dibu h1{
+        font-size: 6rem;
+    }
+
+    .peizhiqi-right-neirong1 .carmodel{
+        width: auto;
+        line-height: 5rem;
+        font-size: 4rem;
+    }
+    .carpaint-container .carpaint{
+       
+        margin: 10px 0;   
+    }
+    .seat-color-container .seat-color{
+        margin: 10px 0;   
+    }
+    .seat-color-title{
+        margin:  0 0
+    }
+    .peizhiqi-right-neirong3 .rear-seat{
+        width: auto;
+        line-height: 5rem;
+        font-size: 4rem;
+    }
+    .peizhiqi-right-neirong4{
+        font-size: 4rem;
+    }
+    .peizhiqi-right-neirong4 h3,
+    .peizhiqi-right-neirong4 .carpaint-container,
+    .peizhiqi-right-neirong4 .seat-color-container,
+    .peizhiqi-right-neirong4 .model,
+    .peizhiqi-right-neirong4 .rear-seat {
+        padding: 0 10px;
+        font-size: 4rem
+    }
+    .peizhiqi-right-neirong4 .yourchoise{
+    font-size: 5rem;
+    font-weight: bolder;
+}
+    .contact-information{
+
+       
+        width: 80vw;
+        height: 15vh;
+        z-index: 200;
+        
+        }
+        .contact-information h2{
+            margin: 0px 0 20px;
+            font-size: 6rem;
+            font-family:bankGT;
+            text-transform: uppercase;
+        }
+        .contact-information span{
+            font-size: 5rem;
+            line-height: 6rem;
+        }
+        
+        .peizhiqi-right-neirong2-title{
+            display: none;
+        }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width:768px) and (max-width:1023px){
+    body{
+       width: 100vw;
+       overflow: auto;
+       overflow-x:hidden
+    }
+    .nav .logo,
+    .nav .brandName{
+        display: none;
+    }
+    .nav .phonetitle{
+        display: none;
+    }
+    .nav{
+        position: fixed;
+        top: 0;
+        z-index: 100;
+       
+    }
+    .nav .container1{
+        height: 7rem;
+    }
+    .nav ul a.current,
+    .nav ul a{
+        font-size: 3rem;
+        color: black;
+    }
+
+    .peizhiqi{
+        flex-direction: column;
+        align-items:center ;
+        justify-content: center;
+    }
+    .peizhiqi-left{
+       
+        height: 45vh;
+        width: 100vw;
+        position: fixed;
+        top: 7rem;
+        background: rgb(247, 247, 247);
+        z-index: 100;
+       
+        
+    }
+    .peizhiqi-right{
+       
+       height: auto;
+      
+        padding: 0 0 12rem;
+        width: 100vw;
+      
+        position: relative;
+        top: calc(45vh + 7rem);
+        
+    } 
+    .carpaint-container .color-box{
+        width: 10rem;
+        height: 10rem;
+        margin: 5px 25px;  
+    }
+    .seat-color-container .seat-color-box{
+        width: 10rem;
+        height: 10rem;
+       
+        margin: 5px 25px;
+        
+    }
+
+    .peizhiqi-right-neirong2 .carpaint-title,
+    .peizhiqi-right-neirong2 .seat-color-title{
+        font-size: 2rem;
+    }
+    .peizhiqi-right-neirong4 .carpaint-box,
+    .peizhiqi-right-neirong4 .seat-color-box-overview{
+        width: 10rem;
+        height: 10rem;
+    }
+    .peizhiqi-right-biaoti{
+        position: fixed;
+        width: 100vw;
+        top: 7rem;
+        
+        z-index: 101;
+        
+    }
+    .peizhiqi-right-biaoti ul{
+        font-size: 2.5rem;
+        margin: 10px 30px;
+    }
+    .peizhiqi-right-dibu{
+        position: fixed;
+        height: 10rem;
+        background-color: #ffffff;
+        bottom: 0;
+       box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1);
+       padding: 0 20px;
+        z-index: 200;
+    }
+    .peizhiqi-right-dibu button{
+        width: 25rem;
+        height: 8rem;
+        margin: 0 10px;
+        font-size: 2.5rem;
+       
+        
+    }
+    .peizhiqi-right-dibu h1{
+        font-size: 4.5rem;
+    }
+
+    .peizhiqi-right-neirong1 .carmodel{
+        width: auto;
+        line-height: 5rem;
+        font-size: 2.5rem;
+    }
+    .carpaint-container .carpaint{
+       
+        margin: 10px 0;   
+    }
+    .seat-color-container .seat-color{
+        margin: 10px 0;   
+    }
+    .seat-color-title{
+        margin:  0 0
+    }
+    .peizhiqi-right-neirong3 .rear-seat{
+        width: auto;
+        line-height: 5rem;
+        font-size: 2.5rem;
+    }
+    .peizhiqi-right-neirong4{
+        font-size: 4rem;
+    }
+    .peizhiqi-right-neirong4 h3,
+    .peizhiqi-right-neirong4 .carpaint-container,
+    .peizhiqi-right-neirong4 .seat-color-container,
+    .peizhiqi-right-neirong4 .model,
+    .peizhiqi-right-neirong4 .rear-seat {
+        padding: 0 20px;
+        font-size: 2.5rem
+    }
+    .peizhiqi-right-neirong4 .yourchoise{
+    font-size: 3.5rem;
+    font-weight: bolder;
+}
+    .contact-information{
+
+       
+        width: 80vw;
+        height: 15vh;
+        z-index: 200;
+        
+        }
+        .contact-information h2{
+            margin: 0px 0 20px;
+            font-size: 5rem;
+            font-family:bankGT;
+            text-transform: uppercase;
+        }
+        .contact-information span{
+            font-size: 3.5rem;
+            line-height: 6rem;
+        }
+        
+        .peizhiqi-right-neirong2-title{
+            display: none;
+        }
+    
+}
