@@ -35,15 +35,24 @@ let contactI = 0  //是否显示联系信息 变量
 let PriceArray=[25000,26000,27000,28000]
 
 let S_model = 'E2'
-let S_paint = 'red'
-let S_seat = 'yellow'
-let S_C = 'N'
+let S_paint = 'Red_carpaint'
+let S_seat = 'Yellow_seat'
+let S_C = 'Normal'
+
+// let S_model = 'E2'
+// let S_paint = 'Black_carpaint'
+// let S_seat = 'Black_seat'
+// let S_C = 'Matal bumper'
 
 
 // console.log(${S_model}-${S_paint};
 console.log('./Product html/' + S_model + '-' + S_paint + '-' + S_seat + '-' + S_C +'.html');
-console.log(1);
-// producIframe.src='./Product html/E44-black-black-MR.html'
+console.log('./Product-img/'+ S_model + '/' + S_paint + '/' + S_seat + '/' + S_C +'/'+'index.html')
+
+
+// producIframe.src='./Product-img/E2/Black_carpaint/Black_seat/Metal bumper/index.html'
+producIframe.src='./Product-img/'+ S_model + '/' + S_paint + '/' + S_seat + '/' + S_C +'/'+'index.html'
+
 
 //rem大小随屏幕大小变化，从而改变字体
 resetrem();
@@ -194,27 +203,27 @@ function carpaintColorChange(){
     if(j==0 ){ 
         CarpaitColorOverview.style.backgroundColor=`#0000ff`
         carpaintText.innerHTML=`Glossy blue`
-        S_paint = 'blue'
+        S_paint = 'Blue_carpaint'
      }
     if(j==1){
         CarpaitColorOverview.style.backgroundColor=`#B8B8B8`
         carpaintText.innerHTML=`Glossy grey`
-        S_paint = 'grey'
+        S_paint = 'Grey_carpaint'
     }
     if(j==2){ 
         CarpaitColorOverview.style.backgroundColor=`#ff0000`
         carpaintText.innerHTML=`Glossy red`
-        S_paint = 'red'
+        S_paint = 'Red_carpaint'
     }
     if(j==3){ 
         CarpaitColorOverview.style.backgroundColor=`#000000`
         carpaintText.innerHTML=`Glossy black`
-        S_paint = 'black'
+        S_paint = 'Black_carpaint'
     }
     if(j==4){ 
         CarpaitColorOverview.style.backgroundColor=`#A00101`
         carpaintText.innerHTML=`Matte red`
-        S_paint = 'matteR'
+        S_paint = 'Matte_red_carpaint'
     }
 }
 //改变Overview 座椅颜色部分选择
@@ -223,12 +232,12 @@ function seatcolorChange(){
     if(k==0){
        seatcolorOverview.style.backgroundColor=`#000000`
        seatcolorText.innerHTML=`Black`
-       S_seat = 'black'
+       S_seat = 'Black_seat'
     }
     if(k==1){
        seatcolorOverview.style.backgroundColor=`#F6DBBC`
        seatcolorText.innerHTML=`Yellow`
-       S_seat = 'yellow'
+       S_seat = 'Yellow_seat'
 
     }
 }
@@ -240,7 +249,7 @@ function modelChange(){
     }
     if(l==1){
         choiseModel.innerHTML=`ENGAGE 2 seaters with 3' lifted kit<br>$26000`
-        S_model = 'E22'
+        S_model = 'E2_3'
     }
     if(l==2){
         choiseModel.innerHTML=`ENGAGE 4 seaters <br>$27000`
@@ -248,7 +257,7 @@ function modelChange(){
     }
     if(l==3){
         choiseModel.innerHTML=`ENGAGE 4 seaters with 6' lifted kit<br>$28000` 
-        S_model = 'E44'      
+        S_model = 'E4_6'      
     }
     
 }
@@ -304,21 +313,22 @@ function btnshow(){
 function changeIframe(){
     if(m==true){
        if(n==true){
-         S_C = 'MR'
+         S_C = 'Metal bumper_RFS'
        }
        else{
-        S_C = 'R'
+        S_C = 'RFS'
        }
         
        }
     if(m==false){
         if(n==true){
-            S_C = 'M'
+            S_C = 'Metal bumper'
           }
           else{
-           S_C = 'N'
+           S_C = 'Normal'
           }
        }
 
-       producIframe.src='./Product html/' + S_model + '-' + S_paint + '-' + S_seat + '-' + S_C +'.html'
+    //    producIframe.src='./Product html/' + S_model + '-' + S_paint + '-' + S_seat + '-' + S_C +'.html'
+    producIframe.src='./Product-img/'+ S_model + '/' + S_paint + '/' + S_seat + '/' + S_C +'/'+'index.html'
 }
