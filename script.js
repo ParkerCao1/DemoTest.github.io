@@ -330,5 +330,5 @@ function changeIframe(){
        }
 
     //    producIframe.src='./Product html/' + S_model + '-' + S_paint + '-' + S_seat + '-' + S_C +'.html'
-    producIframe.src='./Product-img/'+ S_model + '/' + S_paint + '/' + S_seat + '/' + S_C +'/'+'index.html'
+    producIframe.src='./'+ S_model + '/' + S_paint + '/' + S_seat + '/' + S_C +'/'+'index.html'
 }
