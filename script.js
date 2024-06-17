@@ -51,7 +51,7 @@ console.log('./Product-img/'+ S_model + '/' + S_paint + '/' + S_seat + '/' + S_C
 
 
 // producIframe.src='./Product-img/E2/Black_carpaint/Black_seat/Metal bumper/index.html'
-producIframe.src='./Product-img/'+ S_model + '/' + S_paint + '/' + S_seat + '/' + S_C +'/'+'test.html'
+// producIframe.src='./Product-img/'+ S_model + '/' + S_paint + '/' + S_seat + '/' + S_C +'/'+'test.html'
 
 
 //rem大小随屏幕大小变化，从而改变字体
